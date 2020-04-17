@@ -17,9 +17,16 @@ body {
 
     display: grid;
     align-content: space-around;
-    justify-items: center;
+    justify-items: stretch;
    
 }
+
+.logo-main, .recent-posts {
+    display: grid;
+    justify-items: center;
+}
+
+
 
 $grey-one: #b3b3;
 $grey-two: #666;
