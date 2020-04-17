@@ -17,6 +17,11 @@ body {
 
     display: grid;
     align-content: space-around;
-    justify-content: center;
+    justify-items: center;
    
 }
+
+$grey-one: #b3b3;
+$grey-two: #666;
+
+@import './searchbar.scss';
