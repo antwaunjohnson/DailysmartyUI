@@ -17,7 +17,7 @@ body {
 
     display: grid;
     align-content: space-around;
-    justify-items: stretch;
+    // justify-items: stretch;
    
 }
 
@@ -26,9 +26,20 @@ body {
     justify-items: center;
 }
 
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+
 
 
 $grey-one: #b3b3;
 $grey-two: #666;
+$blue-one: #0079ff;
+
 
 @import './searchbar.scss';
+@import './recentposts.scss';
