@@ -21,13 +21,33 @@ class Post extends Component {
     return topics;
   }
 
+  getNameForPostLink(str) {
+    var n = str.lastIndexOf("/");
+    var url = str.substring(n + 1, str.length);
+
+    if (n + 1 == str.length) {
+      url = str.slice(0, n);
+    }
+
+    if (url.includes(".html")) {
+      url = url.substring(0, url.length - 5);
+    }
+    if (url.includes(".htm")) {
+      url = url.substring(0, url.length - 4);
+    }
+
+    return url;
+  }
+
   renderLinks() {
     let links = this.props.post_links.map((post_link, index) => {
       return (
         <div className="post-link" key={index}>
           <div className="post-link__box"></div>
           <div className="post-link__link">
-            <a href={post_link.link_url}>Useful Link #{index + 1}</a>
+            <a href={post_link.link_url}>
+              {this.getNameForPostLink(post_link.link_url)}
+            </a>
           </div>
         </div>
       );
