@@ -23,20 +23,20 @@ class Post extends Component {
 
   getNameForPostLink(str) {
     var n = str.lastIndexOf("/");
-    var url = str.substring(n + 1, str.length);
+    var reslink = str.substring(n + 1, str.length);
 
     if (n + 1 == str.length) {
-      url = str.slice(0, n);
+      reslink = str.slice(0, n);
     }
 
-    if (url.includes(".html")) {
-      url = url.substring(0, url.length - 5);
+    if (reslink.includes(".html")) {
+      reslink = reslink.substring(0, reslink.length - 5);
     }
-    if (url.includes(".htm")) {
-      url = url.substring(0, url.length - 4);
+    if (reslink.includes(".htm")) {
+      reslink = reslink.substring(0, reslink.length - 4);
     }
 
-    return url;
+    return reslink;
   }
 
   renderLinks() {
@@ -52,6 +52,9 @@ class Post extends Component {
         </div>
       );
     });
+    if (links == 0) {
+      return <div className="no-content">No Post Links</div>;
+    }
     return links;
   }
 

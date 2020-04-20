@@ -29,10 +29,18 @@ ul {
   list-style-type: none;
 }
 
+
+
 $grey-one: #b3b3b3;
-$grey-two: #666;
+$grey-two: #666666;
 $grey-three: #d8d8d8;
 $blue-one: #0079ff;
+
+.no-content {
+  color: $grey-one;
+  font-size: 14px;
+  line-height: 17px;  
+}
 
 @import "./mixins.scss";
 @import "./searchbar.scss";
